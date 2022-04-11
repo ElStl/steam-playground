@@ -62,19 +62,7 @@ import java.util.OptionalLong;
                     .filter(legoSet -> legoSet.getTheme().startsWith("M"))
                     .count();
         }
-        /**
-         * 5.
-         * Return the product which is less than 500 pieces.
-         *
-         * @param less pieces of the product
-         * @return the number of the biggest product pieces
-         */
-        public long lessThanFivehundred(String less) {
-            return getAll().stream()
-                    .filter(legoSet -> legoSet.getPieces() < 500)
-                    .map(LegoSet::getName)
-                    .forEach(System.out::println);
-        }
+
 
         public static void main(String[] args) {
             var repository = new LegoSetRepository();
@@ -82,6 +70,5 @@ import java.util.OptionalLong;
             System.out.println(repository.mostOfThePieces("piece"));
             System.out.println(repository.longestName("longest"));
             System.out.println(repository.startsWith("first"));
-            System.out.println(repository.lessThanFivehundred("less"));
         }
     }
